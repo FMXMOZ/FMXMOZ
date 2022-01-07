@@ -1,0 +1,120 @@
+/* bootstrap tabs*/
+.nav-tabs {
+    border: none;
+  .nav-item{
+    padding: 0;
+    margin-bottom: 0;
+    @media(max-width: 575px){
+      width: 100%;
+    }
+  }
+  .nav-link {
+    border-radius: 0;
+    margin-right: 4px;
+    padding: 22px 42px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: capitalize;
+    background: $lightColor;
+    color: $darkgreyColor;
+    border: 1px solid $borderColor;
+    border-bottom: none;
+    @media(max-width: 1200px){
+      min-width: 200px;
+    }
+    @media(max-width: 991px){
+      min-width: 150px;
+    }
+    @media(max-width: 575px){
+      width: 100%;
+    }
+
+
+    &:hover {
+     border-color: $colorMain;
+      background: $colorMain;
+
+    }
+  }
+
+  .nav-item.show .nav-link,
+  .nav-link.active {
+    border-color: $colorMain;
+    background: $colorMain;
+  }
+  &.vertical-tabs{
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+    .nav-item{
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    .nav-link{
+      border: 1px solid $borderColor;
+      background: #fff;
+      color: $fontColor;
+      text-align: left;
+      min-width: unset;
+      padding: 30px 40px;
+      @media( max-width: 575px){
+        text-align: center;
+      }
+      .media{
+        .media-body{
+          margin-left: 14px;
+          @media( max-width: 575px){
+            margin-left: 0;
+          }
+          h6{
+            font-family: "Open Sans", sans-serif;
+            font-weight: 600;
+            margin-bottom: 15px;
+        
+            letter-spacing: -0.2px;
+          }
+        }
+      }
+      &:hover{
+        background-color: $greyColor;
+        border-color: $greyColor;
+      }
+    }
+    .nav-item.show .nav-link,
+    .nav-link.active {
+      background-color: $greyColor;
+      border-color: $greyColor;
+    }
+  }
+}
+
+
+
+.tab-content {
+  border: 1px solid $borderColor;
+  padding: 40px;
+  @media(max-width: 575px){
+    padding: 30px;
+  }
+  &.border-none{
+    border: none;
+  }
+
+}
+
+.tab-pane {
+  .media {
+    img {
+      max-width: 40%;
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+    h3, h4, h5 {
+      font-weight: 900;
+    }
+  }
+}

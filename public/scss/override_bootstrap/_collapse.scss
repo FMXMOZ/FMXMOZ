@@ -1,0 +1,157 @@
+/* bootstrap collapse*/
+//unstyled
+[data-toggle="collapse"] {
+  display: block;
+  position: relative;
+  padding: 0.5em;
+
+  &:after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -7px;
+    font-size: 10px;
+     font-family: "Font Awesome 5 Free", sans-serif;
+    content: "\f078";
+    font-weight: 900;
+  }
+  &.collapsed {
+    &:after {
+      content: "\f054";
+    }
+
+  }
+}
+
+//cards as tabs
+[role="tablist"] {
+  .title-accordion{
+
+
+
+  }
+  & + &{
+    margin-top: 57px;
+  }
+ & > div{
+
+   [data-toggle="collapse"]:after {
+     margin-top: 0;
+     transform: translateY(-50%);
+   }
+  }
+  .card {
+    border-radius: 0;
+    border: none;
+    background: none;
+    border: 1px solid $borderColor;
+
+    & + .card{
+      border-top: none;
+    }
+  }
+  .card-header {
+    padding: 0;
+    background: $lightColor;
+    border: none;
+    h5{
+      font-family: 'Open Sans', sans-serif;
+    }
+    a {
+      font-size: 16px;
+      margin: 0;
+      letter-spacing: 0;
+      line-height: 1;
+      padding: 1em 2.5em 1em 4.32em;
+      color: $darkColor;
+      font-weight: 700;
+      display: block;
+      position: relative;
+      transition: all .3s ease-in-out;
+      @media(max-width: 575px){
+        padding: 1em 1.5em 1em 2.7em;
+      }
+      &:before{
+        content: '?';
+        font-weight: 500;
+        display: block;
+        position: absolute;
+        font-family: "Poppins", sans-serif;
+        color: $darkgreyColor;
+        border: 1px solid $colorMain;
+        background-color: $colorMain;
+        left: 20px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        right: auto;
+        top: 9px;
+        bottom: auto;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+        @media(max-width: 575px){
+          left: 7px;
+        }
+      }
+
+      &:after {
+        content: '\f054';
+        font-family: "Font Awesome 5 Free", sans-serif;
+        background: $lightColor;
+        color: $darkColor;
+        font-weight: 700;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+        right: 21px;
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+        @media(max-width: 575px){
+          right: 15px;
+        }
+      }
+      &:hover {
+        color: $darkColor;
+        font-weight: 700;
+        opacity: 1;
+
+        &:before,
+        &:after {
+
+        }
+      }
+
+      &.collapsed {
+        color: $fontColor;
+        font-weight: 400;
+        transition: all .3s ease-in-out;
+        &:after {
+          transform: translateY(-50%) rotate(0deg);
+          transition: all 0.3s ease-in-out;
+        }
+        &:before{
+          background: $lightColor;
+          border-color: $borderColor;
+        }
+        &:hover {
+          &:before{
+            background-color: $colorMain;
+            border-color: $colorMain;
+          }
+
+        }
+      }
+    }
+  }
+  .card-body {
+    padding: 0 4.5em 0.7em;
+    background-color: $lightColor;
+    @media(max-width: 575px){
+      padding: 0 1.5em 0.7em 2.7em;
+    }
+  }
+  .media img {
+    max-width: 80px;
+  }
+}

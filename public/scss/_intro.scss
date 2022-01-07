@@ -1,0 +1,342 @@
+/* 
+** Intro Section Styles
+*/
+
+.page_slider {
+  position: relative;
+  overflow: hidden;
+  //fix slider bug on small screens
+  clear: both;
+
+  .video-bg {
+    .s-overlay.ds:before {
+      opacity: 0.5;
+      z-index: 5;
+    }
+
+    @media (min-width: 1300px) {
+      background-image: none !important;
+    }
+  }
+
+  video {
+    min-width: 100%;
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+
+
+
+
+
+  .flexslider {
+    //making every slide same height (stretch) for nice background on every slide
+    &.slider-2{
+      .container-fluid,
+      .container,
+      img + .container {
+        margin-top: 0;
+        @media(min-width: 1200px){
+          margin-bottom: 70px;
+        }
+
+      }
+    }
+    .slides {
+
+      @media(max-width: 1200px) {
+        height: 670px;
+      }
+      @media(max-width: 991px) {
+        height: 500px;
+      }
+      @media(max-width: 991px) {
+        li > img{
+          display: none;
+        }
+      }
+      @media(max-width: 767px) {
+        height: 800px;
+      }
+      @media(max-width: 575px) {
+        height: 760px;
+      }
+      @media(max-width: 410px) {
+        height: 800px;
+      }
+    }
+    .intro_layers_wrapper{
+      .intro_layers{
+        max-width: 670px;
+        .intro_layer{
+          img{
+
+            max-width: 250px;
+            @media(max-width: 768px){
+              max-width: 150px;
+            }
+            @media(max-width: 575px){
+              margin: 0 auto;
+              max-width: 100px;
+
+            }
+
+          }
+          .thin{
+            font-weight: 100;
+          }
+          .bold{
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .slide-1{
+      .d-flex{
+        .intro_layer {
+          &:first-child{
+            @media(min-width: 768px){
+              padding-right: 40px;
+              padding-left: 20px;
+            }
+
+          }
+          & +.intro_layer{
+            @media(min-width: 768px) {
+              padding-left: 40px;
+              border-left: 1px solid $darkBorderColor;
+              margin-top: 0;
+            }
+            @media(max-width: 767px) {
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+      h2{
+        @media(min-width: 992px){
+          font-size: 80px;
+          line-height: 0.9;
+        }
+        span{
+          @media(min-width: 992px){
+            font-size: 90px;
+          }
+
+        }
+      }
+      p{
+        font-size: 20px;
+        color: $lightColor;
+      }
+      .many-buttons{
+        margin-top: 60px;
+        @media(max-width: 991px){
+          margin-top: 30px;
+        }
+      }
+    }
+    .slide-2{
+      .intro_layers{
+        max-width: 600px;
+        @media(max-width: 768px){
+          max-width: 460px;
+        }
+        @media(max-width: 575px){
+          max-width: 100%;
+        }
+      }
+      h2{
+        position: relative;
+        padding-bottom: 40px;
+
+        @media(min-width: 992px){
+          font-size: 90px;
+          line-height:0.95;
+          margin-bottom: 40px;
+        }
+        span{
+          @media(min-width: 992px){
+            font-size: 110px;
+            letter-spacing: -4px;
+          }
+
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          height: 20px;
+          -webkit-mask: url("../images/line.png") center left no-repeat;
+          background-color: $colorMain;
+          bottom: 0;
+          left: 10px;
+          right: 0;
+          @media(max-width: 575px){
+            -webkit-mask-position-x: center;
+          }
+        }
+      }
+      p{
+        color: $lightColor;
+      }
+      .many-buttons{
+        margin-top: 40px;
+        @media(max-width: 991px){
+          margin-top: 30px;
+        }
+      }
+    }
+    .slide-3{
+      .d-flex{
+        margin-bottom: 30px;
+        @media(min-width: 992px){
+          margin-bottom: 35px;
+        }
+        .intro_layer {
+          & +.intro_layer{
+            @media(min-width: 768px) {
+              margin-left: 30px;
+            }
+            @media(max-width: 767px) {
+              margin-top: 30px;
+              margin-left: 0;
+            }
+          }
+        }
+      }
+      p:not(.special-heading){
+        color: $lightColor;
+      }
+      .many-buttons{
+        margin-top: 40px;
+        @media(max-width: 991px){
+          margin-top: 30px;
+        }
+      }
+
+    }
+    .slide-4{
+      p.price-intro{
+        margin-bottom: 30px;
+        span:first-child{
+          font-size: 90px;
+          font-weight: 200;
+          span{
+            font-weight: 500;
+          }
+        }
+        span:nth-child(2){
+          font-size: 30px;
+          max-width: 300px;
+          display: inline-block;
+          line-height: 1.3;
+          margin-left: 20px;
+        }
+      }
+      h2{
+        margin-bottom: 30px;
+        @media(min-width: 992px){
+          font-size: 70px;
+          margin-bottom: 60px;
+        }
+
+      }
+      p{
+        color: $lightColor;
+        margin-bottom: 30px;
+        font-size: 20px;
+        @media(min-width: 992px){
+          margin-bottom: 60px;
+        }
+      }
+
+    }
+  }
+  //lg and bigger layout
+  @media(min-width: 300px) {
+
+    .cs,
+    .ds {
+      background-color: transparent;
+      &:before{
+        opacity: 0.7;
+      }
+    }
+    .container-fluid,
+    .container,
+    img + .container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px;
+      @media(max-width: 1200px){
+        margin-top: 80px;
+      }
+      @media(max-width: 767px){
+        margin-top: 80px;
+      }
+    }
+    [class*="row"]{
+      height: 100%;
+    }
+  }
+
+  //dots - horizontal
+  .flex-control-nav {
+    position: absolute;
+    left: auto;
+    right: 2.3%;
+    top: 55%;
+    transform: translateY(-50%);
+    bottom: auto;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+
+    @media(max-width: 575px) {
+      display: none;
+    }
+
+    li {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 40px;
+      &:hover a {
+        background: $colorMain;
+        height: 50px;
+        opacity: 1;
+      }
+
+      a {
+        display: block;
+        margin: 5px 0;
+
+        cursor: pointer;
+        font-size: 0;
+        width: 2px;
+        height: 2px;
+        background: $colorMain;
+        opacity: 1;
+        border-radius: 0;
+        border: none;
+
+
+
+        &.flex-active {
+          background: $colorMain;
+          height: 50px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

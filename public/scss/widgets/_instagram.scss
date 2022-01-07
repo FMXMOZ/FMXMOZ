@@ -1,0 +1,20 @@
+.widget_instagram {
+  margin-bottom: -5px;
+  .instafeed{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -5px;
+    .photo {
+      display: inline-block;
+      max-width: 100%;
+      width: 48.333333%;
+      padding: 5px;
+    }
+
+    img {
+      width: 100%;
+
+    }
+  }
+
+}

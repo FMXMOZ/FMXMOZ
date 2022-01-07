@@ -1,0 +1,65 @@
+/*
+** Buttons
+ */
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow:none;
+}
+
+/*color background buttons*/
+.btn-maincolor,
+.btn-maincolor2,
+.btn-maincolor3,
+.btn-darkgrey {
+  color: $darkgreyColor;
+}
+
+.btn-maincolor {
+  background-color: $colorMain;
+}
+
+.btn-maincolor2 {
+  background-color: $colorMain2;
+}
+
+.btn-maincolor3 {
+  background-color: $colorMain3;
+}
+
+.btn-darkgrey {
+  background-color: $darkgreyColor;
+  color: $lightColor;
+}
+
+/*color outline buttons*/
+.btn-outline-maincolor,
+.btn-outline-maincolor2,
+.btn-outline-maincolor3{
+  background-color: transparent;
+
+  color: $darkgreyColor;
+}
+
+.btn-outline-maincolor {
+  border-color: $colorMain;
+}
+
+.btn-outline-maincolor2 {
+  border-color: $colorMain2;
+}
+
+.btn-outline-maincolor3 {
+  border-color: $colorMain3;
+}
+
+.btn-outline-darkgrey {
+  border-color: $greyColor;
+  color: $darkgreyColor;
+}
+
+
+

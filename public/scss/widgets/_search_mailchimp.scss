@@ -1,0 +1,209 @@
+/*
+widget_search,
+widget_mailchimp
+widget_product_search
+*/
+
+.widget_search,
+.widget_product_search,
+.widget_mailchimp {
+  form {
+    position: relative;
+    max-width: 370px;
+    margin: 0 auto;
+    i{
+      display: none;
+    }
+  }
+  label {
+    margin: 0;
+    padding: 0;
+    display: inline;
+  }
+  input {
+    width: 100%;
+    max-width: 370px;
+    border: 1px solid $borderColor;
+    border-radius: 5em;
+    padding: 5px 20px;
+  }
+}
+
+  .page_footer, .page_copyright{
+    .widget_mailchimp{
+      //position: relative;
+      form{
+        max-width: 400px;
+        position: relative;
+      }
+      .screen-reader-text{
+        position: static !important;
+        font-weight: 300;
+        font-size: 16px;
+      }
+      i{
+        position: absolute;
+        left: 30px;
+        top: 18px;
+        color: $lightColor;
+        @media(max-width: 575px){
+          left: 15px;
+        }
+      }
+      input{
+        padding: 9px 140px 9px 60px;
+        background-color: transparent;
+        max-width: 100% ;
+        position: relative;
+        @media(max-width: 575px){
+          padding: 9px 110px 9px 40px;
+        }
+
+      }
+      button{
+        min-width: 130px;
+        height: 50px;
+        background-color: $colorMain;
+        border-radius: 5em;
+        margin: 0;
+        top: 0;
+        transform: none;
+        right: 0;
+        border: 2px solid $colorMain;
+        color: $darkgreyColor;
+        &:hover{
+          color: $lightColor;
+        }
+        &:before{
+          display: none;
+        }
+        @media(max-width: 575px){
+          min-width: 100px;
+        }
+      }
+      .response{
+        margin-top: 20px;
+      }
+    }
+  }
+
+
+
+//buttons and icons inside a form to the right
+.widget_search button,
+.widget_mailchimp button,
+  //input instead of button is used in woo html
+.widget_product_search form input[type="submit"],
+.widget_product_search form:before {
+  text-align: center;
+  bottom: auto;
+  width: 35px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  border: none;
+  background-color: transparent;
+  transform: translateY(-50%);
+  opacity: 1;
+  line-height: 1;
+  margin-top: 0;
+  padding: 6px 10px;
+}
+
+.widget_search button,
+.widget_mailchimp button,
+  //input instead of button is used in woo html
+.widget_product_search form input[type="submit"] {
+  min-width: auto;
+  cursor: pointer;
+  &:hover{
+    background-color: transparent;
+    opacity: 1;
+    &:before{
+      color: $colorMain;
+
+    }
+  }
+}
+
+//icons for buttons
+.widget_search button,
+.widget_mailchimp button,
+  //input instead of button is used in woo html
+.widget_product_search form {
+  &:before {
+
+    font-size: 14px;
+    content: "\f002";
+     font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 900;
+  }
+}
+
+.widget_mailchimp form button:before {
+  content: "\f0e0";
+  font-weight: 400;
+  font-family: "Font Awesome 5 Free", sans-serif;
+}
+
+.widget_product_search {
+  form:before {
+    line-height: 35px;
+  }
+  input[type="submit"] {
+    color: transparent;
+    font-size: 0;
+  }
+}
+
+.section-mailchimp.widget_mailchimp{
+  display: inline-block;
+  width: 43%;
+  margin: 0;
+  @media(max-width: 768px){
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  form{
+    width: 100%;
+    max-width: unset;
+  }
+  input{
+    border: 1px solid $lightColor;
+    text-align: left;
+    padding: 10px 20px 10px 40px;
+    height: 50px;
+    color: $fontColor;
+    background: $lightColor;
+    margin-bottom: 0;
+    max-width: unset;
+
+    border-radius: 5rem;
+  }
+  button{
+    position: absolute;
+    padding: 12px 50px;
+    width: auto;
+    font-weight: 400;
+
+    right: -1px;
+    left: auto;
+    display: block;
+    height: 50px;
+    bottom: 0;
+    background: $colorMain;
+    text-align: center;
+    border-radius: 0 5rem 5rem 0;
+    color: $lightColor;
+    margin: 0;
+    @media(max-width: 991px){
+      padding: 12px 15px;
+    }
+    &:before{
+      display: none;
+    }
+    .screen-reader-text{
+      position: static !important;
+    }
+  }
+}

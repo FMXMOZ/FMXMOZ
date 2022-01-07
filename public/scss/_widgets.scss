@@ -1,0 +1,322 @@
+/*
+** Widgets
+*/
+aside h2 {
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+aside > * + * {
+  margin-top: 60px;
+  @media(max-width: 575px){
+    margin-top: 40px;
+  }
+}
+
+
+
+.widget {
+  position: relative;
+  & > h3,
+  .widget-title {
+    @include widget-title();
+  }
+&.widget_icons_list{
+  .widget-title{
+    margin-bottom: 0.9em;
+  }
+}
+  //for shortcodes demo
+  & > h2:last-child {
+    line-height: 1;
+  }
+
+  //our custom widgets with bootstrap .media element
+  li.media {
+    margin-bottom: 0;
+
+    img {
+      max-width: 100px;
+      height: 100px;
+    }
+    h3, h4 {
+
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 0.8em;
+      text-transform: none;
+      margin-top: 0.7em;
+      letter-spacing: 0;
+      @media(max-width: 768px){
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+      }
+    }
+    p {
+      font-size: 16px;
+      color: $fontColor;
+      i{
+        margin-right: 10px;
+        font-size: 16px;
+        color: $colorMain;
+      }
+      span{
+        color: $colorMain;
+        @media(max-width: 768px){
+          padding: 0;
+        }
+      }
+    }
+    .media-body{
+      margin-left: 21px;
+      padding-right: 26px;
+      .item-media{
+        font-weight: 500;
+      }
+    }
+  }
+  .only_title{
+    li.media{
+      &:first-child{
+        .media-body{
+          h6{
+            margin-top: 0;
+          }
+        }
+
+      }
+      .media-body{
+        margin-left: 0;
+        h6{
+          margin: 10px 0;
+          padding-left: 20px;
+          font-weight: 500;
+          font-size: 16px;
+          position: relative;
+          &:before{
+            content: '\f054';
+            font-family: "Font Awesome 5 Free", sans-serif;
+            color: $colorMain;
+            font-weight: 600;
+            font-size: 14px;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .page_footer & {
+
+
+     h3, .widget-title {
+      margin-bottom: 2.1em;
+      font-size: 20px;
+       @media(max-width: 768px){
+         margin-bottom: 1.5em;
+       }
+    }
+  }
+
+
+  &.widget_contact_us{
+    display: flex;
+    @media(max-width: 1200px){
+      flex-direction: column;
+    }
+    .contact_us_title, .contact_us_share{
+      width: 50%;
+      @media(max-width: 1200px){
+        width: 100%;
+      }
+    }
+    .contact_us_title{
+      background: url("../img/patterns/pattern4.png");
+
+      padding: 74px 32px 74px 0;
+      @media(max-width: 1300px){
+        padding: 74px 0 74px 0;
+      }
+      @media(max-width: 1200px){
+        padding: 74px 20px;
+      }
+      @media(max-width: 575px){
+        padding: 34px 20px;
+      }
+      h3{
+        max-width: 545px;
+        margin-left: auto;
+        @media(max-width: 1200px){
+          max-width: none;
+          text-align: center;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+
+.widget-title.next-image-background {
+  position: relative;
+  z-index: 2;
+  & + img {
+    position: absolute;
+    left: 0;
+    top: -15px;
+    opacity: 0.5;
+  }
+  .text-center & + img {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media(max-width: 991px) {
+  aside {
+    margin: 60px auto 0;
+    max-width: 370px;
+  }
+}
+
+/* affix-aside */
+.affix-aside {
+  position: relative;
+  &.affix {
+    position: fixed;
+    //oriented header height
+    top: 100px;
+  }
+  &.affix-bottom {
+    position: absolute !important;
+  }
+  &.affix-top {
+    width: inherit !important;
+    left: auto !important;
+  }
+
+  @media(max-width: 991px) {
+    &,
+    &.affix-top,
+    &.affix,
+    &.affix-bottom {
+      position: static !important;
+      width: 100% !important;
+    }
+  }
+}
+
+//p.stars removed
+.stars {
+  & > span {
+    display: flex;
+  }
+
+  a {
+    position: relative;
+    width: 1em;
+    color: transparent;
+    text-indent: -999em;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1em;
+      height: 1em;
+      line-height: 1;
+      text-indent: 0;
+       font-family: "Font Awesome 5 Free", sans-serif;
+      font-weight: 900;
+      font-size: 14px;
+    }
+    &:before,
+    &:hover ~ a:before {
+      color: $fontColor;
+      content: "\f005"
+    }
+  }
+  &.selected a.active:before,
+  &:hover a:before {
+    content: "\f005";
+    color: $colorMain;
+    opacity: 1;
+  }
+  &.selected {
+    a.active ~ a:before {
+      content: "\f005";
+      color: $fontColor;
+      opacity: .75
+    }
+    a:not(.active):before {
+      content: "\f005";
+      color: $colorMain;
+      opacity: 1
+    }
+  }
+}
+
+.star-rating {
+  overflow: hidden;
+  position: relative;
+  height: 1em;
+  line-height: 1;
+  font-size: 1em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 4.7em;
+  letter-spacing: 0.1em;
+  text-indent: 0.1em;
+  text-align: center;
+   font-family: "Font Awesome 5 Free", sans-serif;
+  color: $colorMain;
+
+  &:before {
+    font-family: "Font Awesome 5 Free", sans-serif;
+    content: '\f005\f005\f005\f005\f005';
+    float: left;
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  span {
+    overflow: hidden;
+    float: left;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding-top: 1.5em;
+
+    &:before {
+      font-family: "Font Awesome 5 Free", sans-serif;
+      content: '\f005\f005\f005\f005\f005';
+      top: 0;
+      position: absolute;
+      left: 0;
+      font-weight: 900;
+      font-size: 12px;
+    }
+
+  }
+}
+
+@import 'widgets/search_mailchimp';
+@import 'widgets/nav_cat_arch_meta_pages';
+@import 'widgets/calendar';
+@import 'widgets/rss';
+@import 'widgets/tag_cloud';
+@import 'widgets/flickr';
+@import 'widgets/instagram';
+@import 'widgets/access_press';
+@import 'widgets/twitter';
+@import 'widgets/post_slider';
+@import 'widgets/post_tabs';
+@import 'widgets/post_2cols';

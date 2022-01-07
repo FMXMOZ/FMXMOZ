@@ -1,0 +1,22 @@
+/* widget_tag_cloud */
+.tagcloud {
+  a {
+    border: 1px solid $borderColor;
+    border-radius: 5em;
+    padding: 7px 35px;
+    margin: 0 6px 10px 0;
+    text-align: center;
+    display: inline-block;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 16px !important;
+    color: $fontColor;
+    &:hover {
+      background-color: $colorMain;
+      border-color: $colorMain;
+      color: $lightColor !important;
+    }
+  }
+
+}

@@ -1,0 +1,419 @@
+/*
+** General Styles for HTML tags
+*/
+html {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+::selection {
+  color: $lightColor;
+  background-color: $colorMain;
+}
+
+::-moz-selection {
+  color: $lightColor;
+  background-color: $colorMain;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  background-color: $lightColor;
+  overflow: visible;
+  overflow-x: hidden;
+  //for scrollbar always seen
+  overflow-y: scroll;
+  //for scrollspy
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  //text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1em;
+  word-break: break-word;
+  
+  font-family: 'Montserrat', sans-serif;
+  //fix for Raleway numbers
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
+}
+
+h1 {
+  font-size: 80px;
+  margin-top: 0.75em;
+  margin-bottom: 0.375em;
+}
+
+h2 {
+  font-size: 60px;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 50px;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+h4 {
+  font-size: 40px;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+h5 {
+  font-size: 30px;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+h6 {
+  font-size: 20px;
+  margin-top: 3em;
+  margin-bottom: 1.5em;
+}
+
+@include media(lg) {
+  h1 {
+    font-size: 4.4rem;
+    margin-top: 0.45em;
+    margin-bottom: 0.285em;
+  }
+  h2 {
+    font-size: 3.3rem;
+    margin-top: 0.6em;
+    margin-bottom: 0.38em;
+  }
+  h3 {
+    font-size: 2.75rem;
+    margin-top: 0.72em;
+    margin-bottom: 0.456em;
+  }
+  h4 {
+    font-size: 2.2rem;
+    margin-top: 0.9em;
+    margin-bottom: 0.57em;
+  }
+  h5 {
+    font-size: 1.65rem;
+    margin-top: 1.2em;
+    margin-bottom: 0.76em;
+  }
+  h6 {
+    font-size: 1.3rem;
+    margin-top: 1.52em;
+    margin-bottom: 0.965em;
+  }
+}
+
+@include media(sm) {
+  h1 {
+    font-size: 3.4rem;
+    
+  }
+  h2 {
+    font-size: 2.55rem;
+    
+  }
+  h3 {
+    font-size: 2.125rem;
+    
+  }
+  h4 {
+    font-size: 1.7rem;
+  }
+  h5 {
+    font-size: 1.5rem;
+    margin-top: 1em;
+    margin-bottom: 0.65em;
+  }
+  h6 {
+    font-size: 1.2rem;
+    margin-top: 1.25em;
+    margin-bottom: 0.8em;
+  }
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child {
+  margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 1.5em;
+  line-height: 1.5rem;
+}
+
+ul:last-child,
+ol:last-child,
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul, ol {
+    padding-left: 20px;
+  li {
+    padding: 5px 0 5px 0;
+  }
+}
+
+ol.list2 {
+  counter-reset: li;
+  list-style: none outside none;
+  margin-bottom: 0;
+  padding: 0;
+  margin-top: 20px;
+  
+  li {
+    position: relative;
+    padding: 6px 0 6px 33px;
+    
+    &::before {
+      content: "." "0" counter(li);
+      counter-increment: li;
+      position: absolute;
+      left: -5px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: 300;
+      color: $colorMain;
+    }
+  }
+}
+
+p:last-child {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+img, figure {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  p {
+    margin-bottom: 0;
+  }
+  
+  font-size: 0.95em;
+  line-height: 1.4;
+  padding: 10px 0 7px;
+}
+
+b, strong {
+  font-weight: 700;
+  color: $darkColor;
+}
+
+label {
+  color: $darkgreyColor;
+}
+
+a:not(.btn) {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out 0s;
+  color: $darkgreyColor;
+  
+  &:hover {
+    color: $colorMain;
+    text-decoration: none;
+    transition: all 0.15s linear 0s;
+  }
+}
+
+blockquote {
+  border-left: 2px solid $colorMain;
+  padding-left: 40px;
+  padding-top: 20px;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 38px;
+  margin-left: 36px;
+  max-width: 765px;
+  
+  & > p {
+    text-indent: 56px;
+  }
+  
+  @media(max-width: 575px) {
+    padding-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+  }
+  
+  footer {
+    display: flex;
+    p {
+      margin-bottom: 0;
+    }
+    
+    span.divider {
+      margin: 0 25px;
+      @media(max-width: 575px) {
+        margin: 0 10px;
+      }
+    }
+  }
+  
+  &:before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    background: url(../img/quote.png) no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    top: 0;
+    left: 55px;
+    @media(max-width: 575px) {
+      width: 30px;
+      height: 30px;
+      top: 5px;
+      left: 25px;
+    }
+  }
+}
+
+input:focus,
+button:focus,
+select:focus,
+textarea:focus,
+a:focus {
+  outline: medium none;
+  text-decoration: none;
+}
+
+a > img {
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover > img {
+  transform: scale(1.05);
+}
+
+a.btn:active,
+a.button:active,
+button:active,
+input[type="submit"]:active {
+
+}
+
+hr {
+  border-color: $borderColor;
+  //for flexbox
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+iframe {
+  border: none;
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin: 10px 0;
+  
+  td, th {
+    padding: 20px 13px;
+    
+    line-height: 1.42857143;
+    vertical-align: middle;
+    border: 1px solid $borderColor;
+    text-align: left;
+  }
+  
+  th {
+    color: $darkgreyColor;
+    font-weight: normal;
+    vertical-align: middle;
+    padding: 13px 13px;
+  }
+}
+
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+pre {
+  line-height: 1.5;
+  background-color: $universalBackgroundColor;
+  padding: 0.5em 1em;
+}
+
+//block with signature on main page
+.big {
+  margin: 0.45em 0 1em;
+  font-size: 20px;
+  line-height: 1.1em;
+  @media(max-width: 575px) {
+    font-size: 16px;
+  }
+  
+  em {
+    display: inline-block;
+    margin: 0.3em 0 0;
+    @media (min-width: 768px) {
+      margin: 1em 0 0.5em;
+      
+    }
+  }
+}
+
+.bigger {
+  font-size: 30px;
+}
+
+.media {
+  h3 {
+    text-transform: uppercase;
+  }
+  
+  .dropcap {
+    margin-right: 0;
+  }
+}
+
+.small-text {
+  @include small-text();
+  
+  &.extra-letter-spacing {
+    @media (min-width: 768px) {
+      letter-spacing: 1em;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+/*
+** Shortcodes
+*/
+@import 'shortcodes/icon-box';
+@import 'shortcodes/special-heading';
+
+@import 'shortcodes/price_table';
+@import 'shortcodes/quote-item';
+@import 'shortcodes/items-masonry';
+@import 'shortcodes/blog-post';
+
+
+@import 'shortcodes/team';
+@import 'shortcodes/gallery';
+@import 'shortcodes/media-image';
+@import 'shortcodes/services';
+@import 'shortcodes/tournament-list';
+
+.contact-form {
+  textarea {
+    min-height: 100px;
+  }
+}
+
+.excerpt {
+  font-size: 20px;
+  color: $darkgreyColor;
+}

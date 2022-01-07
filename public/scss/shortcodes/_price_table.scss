@@ -1,0 +1,106 @@
+.pricing-plan {
+  text-align: center;
+  padding: 40px 40px;
+  transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+
+  &.small-padding {
+
+    @media(min-width: 576px){
+      width: 250px;
+      padding: 63px 25px;
+    }
+    @media(max-width: 1200px) and (min-width: 992px){
+      padding: 63px 15px;
+    }
+    & + .pricing-plan{
+      margin-left: 10px;
+      &.cs{
+        background-color: darken($colorMain, 7%);
+      }
+      &.ls{
+        background-color: darken($lightColor, 7%);
+      }
+      &.ls.ms{
+        background-color: darken($greyColor, 7%);
+      }
+      &.ds.ms{
+        background-color: darken($darkColor, 7%);
+      }
+      &.ds{
+        background-color: darken($darkgreyColor, 7%);
+      }
+      @media(max-width: 575px){
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &:hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 8px 12px 3px rgba(0, 0, 0, 0.35);
+  }
+
+  .price-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: "Poppins", sans-serif;
+    font-size: 80px;
+    font-weight: 200;
+    line-height: 0.7;
+
+    &[class*='bg-'] {
+      padding: 30px 0;
+      margin-bottom: 0;
+    }
+
+    .plan-sign {
+      font-size: 50px;
+      position: relative;
+      top: -25px;
+    }
+
+    .plan-decimals {
+      font-size: 30px;
+    }
+  }
+
+  [class*='bg-'] {
+    padding: 10px 30px 30px;
+    margin-left: -41px;
+    margin-right: -41px;
+  }
+
+  .plan-name {
+    margin-bottom: 55px;
+    @media(max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+
+    &[class*='bg-'] {
+      padding-top: 30px;
+      margin-top: -40px;
+    }
+  }
+
+  @media(min-width: 1200px) {
+    padding: 95px 85px;
+    [class*='bg-'] {
+      margin-left: -85px;
+      margin-right: -85px;
+    }
+    .plan-name[class*='bg-'] {
+      margin-top: -95px;
+      margin-bottom: 95px;
+    }
+  }
+
+  .plan-features {
+    margin: 40px 0 35px;
+    @media(max-width: 1199px) {
+      margin: 20px 0;
+    }
+  }
+}
+

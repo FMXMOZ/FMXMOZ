@@ -1,0 +1,147 @@
+/*
+** Special Heading
+*/
+.special-heading {
+  word-wrap: break-word;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  margin: 0;
+  width: 100%;
+  span{
+    display: inline-block;
+  }
+  &:first-child{
+    margin-top: -10px;
+    &.sub-title{
+      margin-top: -2px;
+    }
+    &.big{
+      margin-top: -1px;
+    }
+  }
+  @media(max-width: 575px) {
+    text-align: center;
+  }
+
+  &.sub-title {
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    span {
+      padding-left: 55px;
+      position: relative;
+      display: inline-block;
+
+      &:before {
+        content: '';
+        height: 2px;
+        width: 40px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @media(max-width: 575px) {
+          display: none;
+        }
+      }
+
+      @media(max-width: 575px) {
+        padding-left: 0;
+        letter-spacing: 0;
+
+      }
+    }
+
+    &.color-main span {
+      &:before {
+        background-color: $colorMain;
+      }
+    }
+
+    &.color-main2 span {
+      &:before {
+        background-color: $colorMain2;
+      }
+    }
+
+    &.color-main3 span {
+      &:before {
+        background-color: $colorMain3;
+      }
+    }
+
+    &.color-main4 span {
+      &:before {
+        background-color: $colorMain4;
+      }
+    }
+
+    &.color-darkgrey span {
+      &:before {
+        background-color: $darkgreyColor;
+      }
+    }
+  }
+  &.sub-title2{
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-indent: 6px;
+    margin-top: 10px;
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+
+  &:not(p) + p.special-heading {
+    letter-spacing: 0;
+    max-width: 600px;
+    margin: 20px auto 0;
+    display: block;
+    font-weight: 300;
+    line-height: 1.5;
+    @media(max-width: 575px) {
+      max-width: 100%;
+      margin-top: 15px;
+    }
+  }
+
+  &.thin {
+    font-weight: 500;
+  }
+  &.bold {
+    font-weight: 800;
+  }
+
+  &.text-lowercase {
+    font-size: 62px;
+    font-weight: 300;
+    margin-bottom: 0;
+    line-height: 1.1;
+  }
+
+  &.big{
+    @media(min-width: 320px){
+      font-size: 80px;
+      line-height: 0.85;
+    }
+    @media(min-width: 768px){
+      font-size: 160px;
+      line-height: 0.85;
+    }
+  }
+
+
+
+  h3.small & {
+    line-height: 1;
+    font-size: 38px;
+  }
+
+}
+
+h3.small {
+  font-size: 20px;
+  margin-bottom: 36px;
+}

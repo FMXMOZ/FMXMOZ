@@ -1,0 +1,195 @@
+.shortcode-tournament {
+  counter-reset: tournament 1;
+  .tournament-list {
+    padding-right: 80px;
+    @media(max-width: 991px) {
+      padding-right: 0;
+      padding-top: 40px;
+    }
+
+    .item-tournament {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media(max-width: 575px) {
+        flex-direction: column;
+      }
+
+      & + .item-tournament {
+        margin-top: 50px;
+        @media(max-width: 991px) {
+          margin-top: 30px;
+        }
+      }
+
+      &__wrap {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        @media(max-width: 575px) {
+          flex-direction: column;
+        }
+      }
+
+      &__image {
+
+        img {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+        }
+
+        margin-right: 20px;
+        position: relative;
+
+        &:before {
+          counter-increment: tournament;
+          content: '0'counter(tournament);
+          position: absolute;
+          top: -6px;
+          left: -6px;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          line-height: 1;
+          font-weight: 500;
+          background-color: $colorMain;
+          border-radius: 50%;
+          font-size: 14px;
+color: $darkgreyColor;
+          @media(max-width: 575px) {
+            top: -6px;
+            left: -6px;
+            width: 45px;
+            height: 45px;
+            font-size: 20px;
+          }
+        }
+
+        @media(max-width: 575px) {
+          margin-right: 0;
+          img {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        @media(max-width: 575px) {
+          align-items: center;
+          margin-top: 15px;
+        }
+
+        h6 {
+          margin-bottom: 5px;
+          word-break: unset;
+          font-weight: 600;
+          @media(max-width: 575px) {
+            margin-bottom: 15px;
+          }
+        }
+
+        .social-icons {
+          line-height: 1;
+
+          a {
+            color: $fontColor;
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+        }
+      }
+
+      &__dots {
+        flex-grow: 100;
+        margin: 0 15px;
+        height: 2px;
+        background-image: linear-gradient(to right, $darkgreyColor 20%, rgba(255, 255, 255, 0) 20%);
+        background-position: bottom;
+        background-size: 9px 2px;
+        background-repeat: repeat-x;
+        @media(max-width: 575px) {
+          display: none;
+        }
+      }
+
+      &__score {
+        font-size: 30px;
+        color: $darkgreyColor;
+        @media(max-width: 575px) {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .item-tournament-winner {
+    padding: 60px 30px 70px;
+    @media(max-width: 991px) {
+      padding: 30px;
+    }
+
+    .item-media {
+      padding-top: 60px;
+      overflow: hidden;
+      position: relative;
+
+      &:before {
+        content: '\e904';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: 'icomoon';
+        font-size: 40px;
+        line-height: 1;
+        color: $colorMain;
+      }
+
+      img {
+        width: 150px;
+        height: 150px;
+
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+
+      & + .item-content {
+        padding-top: 20px;
+      }
+    }
+
+    .item-content {
+      h5 {
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      h5 + p {
+        margin-bottom: 0;
+        font-size: 20px;
+      }
+
+      .score {
+        background-color: $colorMain;
+        min-width: 128px;
+        display: inline-block;
+        padding: 10px 40px;
+        border-radius: 5em;
+        margin-top: 60px;
+        margin-bottom: 5px;
+        @media(max-width: 991px) {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

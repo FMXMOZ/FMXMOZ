@@ -1,0 +1,22 @@
+/*
+** Borders
+ */
+.border         { border: 1px solid $borderColorRGBA !important; }
+.border-top     { border-top: 1px solid $borderColorRGBA !important; }
+.border-right   { border-right: 1px solid $borderColorRGBA !important; }
+.border-bottom  { border-bottom: 1px solid $borderColorRGBA !important; }
+.border-left    { border-left: 1px solid $borderColorRGBA !important; }
+
+[class*="col-"]{
+  &.border,
+  &.border-top,
+  &.border-right,
+  &.border-bottom,
+  &.border-left{
+    @media (max-width: 991px) {
+      border: none !important;
+    }
+  }
+
+}
+

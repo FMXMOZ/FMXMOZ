@@ -1,0 +1,50 @@
+
+
+.learn-press-courses {
+  &.owl-carousel {
+    .owl-stage-outer {
+      margin-bottom: -15px;
+      margin-top: -15px;
+
+      .owl-stage {
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .course {
+    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+
+    &:hover {
+      transform: translateY(-15px);
+      box-shadow: 0px 8px 12px 3px rgba(0, 0, 0, 0.35);
+    }
+
+    h6 {
+      line-height: 1.2;
+      margin-bottom: 1em;
+    }
+
+    .item-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
+      @media(max-width: 575px){
+        flex-direction: column;
+        margin-top: 10px;
+      }
+      .price{
+        font-size: 30px;
+        color: $darkgreyColor;
+        font-weight: 600;
+        opacity: 1;
+        margin: 0;
+        span{
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
