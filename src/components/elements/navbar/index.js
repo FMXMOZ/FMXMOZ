@@ -233,17 +233,17 @@ const Navbar = () => {
                       </li>
 
                       <li>
-                        <a href="#">Features</a>
+                        <a href="#features">Recursos</a>
                         <div class="mega-menu">
                           <ul class="mega-menu-row">
                             <li class="mega-menu-col">
-                              <a href="#">Headers</a>
+                              <a href="#">Massificação</a>
                               <ul>
                                 <li>
-                                  <a href="header1.html">Header Type 1</a>
+                                  <a href="header1.html">Material</a>
                                 </li>
                                 <li>
-                                  <a href="header2.html">Header Type 2</a>
+                                  <a href="header2.html">Formação</a>
                                 </li>
                                 <li>
                                   <a href="header3.html">Header Type 3</a>
@@ -260,36 +260,22 @@ const Navbar = () => {
                               </ul>
                             </li>
                             <li class="mega-menu-col">
-                              <a href="#">Side Menus</a>
+                              <a href="#">Alta-Competição</a>
                               <ul>
                                 <li>
-                                  <a href="header-side.html">Push Left</a>
+                                  <a href="header-side.html">Campeonato Nacional</a>
                                 </li>
                                 <li>
                                   <a href="header-side-right.html">
-                                    Push Right
+                                    Selecção Nacional
                                   </a>
                                 </li>
                                 <li>
                                   <a href="header-side-slide.html">
-                                    Slide Left
+                                    Comissão de Arbitragem
                                   </a>
                                 </li>
-                                <li>
-                                  <a href="header-side-slide-right.html">
-                                    Slide Right
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="header-side-sticked.html">
-                                    Sticked Left
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="header-side-sticked-right.html">
-                                    Sticked Right
-                                  </a>
-                                </li>
+                                
                               </ul>
                             </li>
                             <li class="mega-menu-col">

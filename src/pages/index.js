@@ -6,11 +6,13 @@ import Team from '../components/partials/home/team';
 import Gallery from '../components/partials/home/gallery';
 import Testimonial from '../components/partials/home/testimonial';
 import Blog from '../components/partials/home/blog';
+import Hero from '../components/partials/home/hero';
 //import Sponsers from '../components/partials/home/sponsers';
 
 export default function Home() {
   return (
     <div className="">
+		<Hero/>
 		<AboutUs />
 		<Features />
 		<Tournament />

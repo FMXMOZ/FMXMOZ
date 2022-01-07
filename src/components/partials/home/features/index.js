@@ -3,7 +3,7 @@ import React from 'react'
 const Features = ()=>{
     return(
     <>
-    <section class="ds s-py-xl-150 s-py-lg-130 s-pt-md-90 s-pb-md-60 s-pt-60 s-pb-30 c-gutter-0 with-particles">
+    <section id="features" class="ds s-py-xl-150 s-py-lg-130 s-pt-md-90 s-pb-md-60 s-pt-60 s-pb-30 c-gutter-0 with-particles">
 				<div id="features" class="particles-js"></div>
 				<div class="container">
 					<div class="row">
